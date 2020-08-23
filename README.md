@@ -1,6 +1,6 @@
-# sequelize-kit
+# grpc-node-kit-v2
 
-A simple 🎲 KIT to start a new Node project.
+A friendly KIT 🧧 for gRPC 🤝 Node.
 
 ## Prepare
 

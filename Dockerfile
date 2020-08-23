@@ -11,6 +11,6 @@ COPY . /app
 
 RUN yarn build
 
-EXPOSE 9000
+EXPOSE 50000
 
 CMD ["yarn", "start"]

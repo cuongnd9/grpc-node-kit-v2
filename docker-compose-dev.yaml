@@ -13,7 +13,7 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
     networks:
-      - graphql-kit-net
+      - x-net
 
   api-service:
     build:
@@ -21,10 +21,10 @@ services:
       dockerfile: Dockerfile.dev
     restart: always
     ports:
-      - 9000:9000
+      - 50000:50000
     environment:
       - NODE_ENV=development
-      - PORT=9000
+      - PORT=50000
       - PG_HOST=db
       - PG_PORT=5432
       - PG_DB=postgres
@@ -34,12 +34,12 @@ services:
       - .:/app
       - ./node_modules:/app/node_modules
     networks:
-      - graphql-kit-net
+      - x-net
     depends_on:
       - db
 
 networks:
-  graphql-kit-net:
+  x-net:
 
 volumes:
   db:
