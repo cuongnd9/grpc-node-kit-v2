@@ -14,13 +14,6 @@ const migration = {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    category_id: {
-      type: DataTypes.UUID,
-      references: {
-        model: 'categories',
-        key: 'id',
-      },
-    },
     created_at: {
       type: DataTypes.DATE,
     },
