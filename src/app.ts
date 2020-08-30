@@ -1,7 +1,10 @@
 import path from 'path';
-import Mali, { Context } from 'mali';
+import Mali from 'mali';
 
-function sayHello(ctx: Context) {
+import { HelloRequest, HelloResponse } from './protoTypes/greeter.protoType';
+import { Context } from './components';
+
+function sayHello(ctx: Context<HelloRequest, HelloResponse>) {
   ctx.res = { message: 'Hello '.concat(ctx.req.name) };
 }
 

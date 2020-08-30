@@ -2,7 +2,7 @@
 
 A friendly KIT 🧧 for gRPC 🤝 Node.
 
-## Prepare
+## Preparation
 
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
@@ -31,14 +31,13 @@ export default config;
 #### Start application
 
 ```sh
-yarn
 yarn start:dev
 ```
 
 ### Use with Docker + Docker Compose
 
 ```sh
-cd scripts && ./start.sh
+yarn docker-compose:start
 ```
 
 🙌 Awesome

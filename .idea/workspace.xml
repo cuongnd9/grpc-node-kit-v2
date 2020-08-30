@@ -20,21 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d130c3-8531-4474-98fe-fd29c090d1e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/build-proto.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/rebuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/rebuild.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/stop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stop.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mali.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-proto.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-proto.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/migrations/20200605151403_create_category.migration.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/migrations/20200605151452_create_cat.migration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/migrations/20200605151452_create_cat.migration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/cat.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/cat.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/category.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protos/greeter.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/proto/greeter.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/cat.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/cat.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/category.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protoTypes/cat.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protoTypes/greeter.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +47,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/proto" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/proto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build:proto">
     <configuration name="build:proto" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -72,8 +70,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.build:proto" />
       </list>
     </recent_temporary>
@@ -107,21 +116,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="202" key="GridCell.Tab.0.bottom" timestamp="1598774325427">
+    <state width="1379" height="202" key="GridCell.Tab.0.bottom" timestamp="1598778188706">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1598774325427" />
-    <state width="1379" height="202" key="GridCell.Tab.0.center" timestamp="1598774325426">
+    <state width="1379" height="202" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1598778188706" />
+    <state width="1379" height="202" key="GridCell.Tab.0.center" timestamp="1598778188705">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1598774325426" />
-    <state width="1379" height="202" key="GridCell.Tab.0.left" timestamp="1598774325426">
+    <state width="1379" height="202" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1598778188705" />
+    <state width="1379" height="202" key="GridCell.Tab.0.left" timestamp="1598778188704">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1598774325426" />
-    <state width="1379" height="202" key="GridCell.Tab.0.right" timestamp="1598774325427">
+    <state width="1379" height="202" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1598778188704" />
+    <state width="1379" height="202" key="GridCell.Tab.0.right" timestamp="1598778188705">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1598774325427" />
+    <state width="1379" height="202" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1598778188705" />
   </component>
 </project>
