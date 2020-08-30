@@ -1,7 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 
 import sequelize from '.';
-import Category from './category.model';
 
 class Cat extends Model {
   public id: string;
@@ -10,20 +9,9 @@ class Cat extends Model {
 
   public color: string;
 
-  public categoryId: string;
-
   public createdAt: Date;
 
   public updatedAt: Date;
-
-  public category?: Category;
-
-  static associate() {
-    this.belongsTo(Category, {
-      as: 'category',
-      foreignKey: 'categoryId',
-    });
-  }
 }
 
 Cat.init({
@@ -38,13 +26,6 @@ Cat.init({
   color: {
     type: DataTypes.STRING,
     allowNull: true,
-  },
-  categoryId: {
-    type: DataTypes.UUID,
-    references: {
-      model: 'categories',
-      key: 'id',
-    },
   },
 }, {
   sequelize,

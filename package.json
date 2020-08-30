@@ -6,11 +6,15 @@
     "start:dev": "nodemon --ignore build/ --exec ts-node src/index.ts",
     "prebuild": "rm -rf build",
     "build": "tsc -p tsconfig.build.json",
+    "build:proto": "./scripts/build-proto.sh",
     "start": "node ./build/index.js",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts",
     "test": "NODE_PATH=./ NODE_ENV=test mocha --exit",
-    "test:coverage": "NODE_PATH=./ NODE_ENV=test nyc mocha --exit"
+    "test:coverage": "NODE_PATH=./ NODE_ENV=test nyc mocha --exit",
+    "docker-compose:start": "./scripts/start.sh",
+    "docker-compose:stop": "./scripts/stop.sh",
+    "docker-compose:rebuild": "./scripts/rebuild.sh"
   },
   "lint-staged": {
     "*.ts": [
@@ -67,6 +71,7 @@
     "sinon-test": "^3.0.0",
     "source-map-support": "^0.5.19",
     "ts-node": "^8.10.1",
+    "ts-proto": "^1.28.0",
     "typescript": "^3.7.2"
   }
 }
