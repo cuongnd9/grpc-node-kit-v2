@@ -20,14 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d130c3-8531-4474-98fe-fd29c090d1e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/mali.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/sequelize.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/build-proto.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-proto.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protoTypes/cat.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protoTypes/greeter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/association.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/cat.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/cat.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proto/cat.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/proto/cat.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/cat.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/cat.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +103,9 @@
       <workItem from="1598718433801" duration="1676000" />
       <workItem from="1598724051264" duration="467000" />
       <workItem from="1598773536244" duration="1514000" />
+      <workItem from="1598795372172" duration="4610000" />
+      <workItem from="1598881746106" duration="7280000" />
+      <workItem from="1598895718584" duration="1540000" />
     </task>
     <servers />
   </component>
@@ -114,23 +122,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="202" key="GridCell.Tab.0.bottom" timestamp="1598778188706">
+    <state width="1379" height="202" key="GridCell.Tab.0.bottom" timestamp="1598778769730">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1598778188706" />
-    <state width="1379" height="202" key="GridCell.Tab.0.center" timestamp="1598778188705">
+    <state width="1379" height="202" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1598778769730" />
+    <state width="1379" height="202" key="GridCell.Tab.0.center" timestamp="1598778769729">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1598778188705" />
-    <state width="1379" height="202" key="GridCell.Tab.0.left" timestamp="1598778188704">
+    <state width="1379" height="202" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1598778769729" />
+    <state width="1379" height="202" key="GridCell.Tab.0.left" timestamp="1598778769729">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1598778188704" />
-    <state width="1379" height="202" key="GridCell.Tab.0.right" timestamp="1598778188705">
+    <state width="1379" height="202" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1598778769729" />
+    <state width="1379" height="202" key="GridCell.Tab.0.right" timestamp="1598778769730">
       <screen x="0" y="23" width="1440" height="838" />
     </state>
-    <state width="1379" height="202" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1598778188705" />
+    <state width="1379" height="202" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1598778769730" />
   </component>
 </project>

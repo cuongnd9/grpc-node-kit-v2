@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 
-import sequelize from '.';
+import { sequelize } from './sequelize';
 
 class Cat extends Model {
   public id: string;
