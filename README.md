@@ -10,9 +10,9 @@ A friendly KIT 🧧 for gRPC 🤝 Node.
 - [Docker Compose](https://docs.docker.com/compose/) (*optional)
 - [Dockstation](https://dockstation.io/) (*optional)
 
-### How to use?
+## How to use?
 
-#### Update config.ts file (src/components/config.ts)
+### Update config.ts file (src/components/config.ts)
 
 ```typescript
 const config = {
@@ -28,7 +28,7 @@ const config = {
 export default config;
 ```
 
-#### Start application
+### Start application
 
 ```sh
 yarn start:dev
@@ -38,6 +38,8 @@ yarn start:dev
 
 ```sh
 yarn docker-compose:start
+yarn docker-compose:stop
+yarn docker-compose:rebuild
 ```
 
 🙌 Awesome
