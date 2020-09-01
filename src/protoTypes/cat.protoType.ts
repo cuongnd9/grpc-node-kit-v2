@@ -13,23 +13,23 @@ export interface ReadRequest {
 }
 
 export interface ReadResponse {
-  cat: Cat | undefined;
+  cat?: Cat;
 }
 
 export interface CreateRequest {
-  cat: CatWithoutId | undefined;
+  cat?: CatWithoutId;
 }
 
 export interface CreateResponse {
-  cat: Cat | undefined;
+  cat?: Cat;
 }
 
 export interface UpdateRequest {
-  cat: Cat | undefined;
+  cat?: Cat;
 }
 
 export interface UpdateResponse {
-  cat: Cat | undefined;
+  cat?: Cat;
 }
 
 export interface DeleteRequest {
