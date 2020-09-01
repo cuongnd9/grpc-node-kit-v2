@@ -17,7 +17,7 @@ export interface ReadResponse {
 }
 
 export interface CreateRequest {
-  cat: Cat | undefined;
+  cat: CatWithoutId | undefined;
 }
 
 export interface CreateResponse {
@@ -42,6 +42,11 @@ export interface DeleteResponse {
 
 export interface Cat {
   id: string;
+  name: string;
+  color: string;
+}
+
+export interface CatWithoutId {
   name: string;
   color: string;
 }

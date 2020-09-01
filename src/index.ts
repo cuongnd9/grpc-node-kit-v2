@@ -10,8 +10,8 @@ globalOptions.environment = config.nodeEnv;
 const main = async () => {
   try {
     const pathToMigration = path.join(__dirname, 'migrations');
-    // await migrateDB(sequelize, pathToMigration).catch((error) => logger.error('Migrate error', error));
-    // associate();
+    await migrateDB(sequelize, pathToMigration).catch((error) => logger.error('Migrate error', error));
+    associate();
 
     const app = createApp();
     app.start(`0.0.0.0:${config.port}`);
