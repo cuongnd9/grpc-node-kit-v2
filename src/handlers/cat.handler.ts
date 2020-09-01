@@ -7,13 +7,16 @@ import { CatService } from '../services/cat.service';
 
 class CatHandler {
   static create = async (ctx: Context<CreateRequest, CreateResponse>) => {
-    // @ts-ignore
-    const cat = await CatService.createCat(ctx.req.cat); // FIXME: ts
+    if (!ctx.req.cat) {
+      ctx.res = { cat: undefined };
+      return;
+    }
+    const cat = await CatService.createCat(ctx.req.cat);
     ctx.res = { cat };
   }
 
   static read = async (ctx: Context<ReadRequest, ReadResponse>) => {
-    const cat = await CatService.getCat(ctx.req.id) || undefined; // FIXME: grpc type
+    const cat = await CatService.getCat(ctx.req.id) || undefined;
     ctx.res = { cat };
   };
 
@@ -23,8 +26,11 @@ class CatHandler {
   };
 
   static update = async (ctx: Context<UpdateRequest, UpdateResponse>) => {
-    // @ts-ignore
-    const [, [cat]] = await CatService.updateCat(ctx.req.cat); // FIXME: ts
+    if (!ctx.req.cat) {
+      ctx.res = { cat: undefined };
+      return;
+    }
+    const [, [cat]] = await CatService.updateCat(ctx.req.cat);
     ctx.res = { cat };
   };
 
