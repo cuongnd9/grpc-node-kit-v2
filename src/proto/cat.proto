@@ -1,6 +1,6 @@
 syntax="proto3";
 
-//package v1;
+package v1;
 
 service CatService {
     rpc ReadAll (ReadAllRequest) returns (ReadAllResponse) {}
@@ -25,7 +25,7 @@ message ReadResponse {
 }
 
 message  CreateRequest {
-  Cat cat = 1;
+  CatWithoutId cat = 1;
 }
 
 message  CreateResponse {
@@ -50,6 +50,11 @@ message DeleteResponse {
 
 message Cat {
   string id = 1;
+  string name = 2;
+  string color = 3;
+}
+
+message CatWithoutId {
   string name = 2;
   string color = 3;
 }

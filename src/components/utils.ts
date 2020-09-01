@@ -1,7 +1,10 @@
+import { resolve } from 'path';
 import Umzug from 'umzug';
 import { Sequelize } from 'sequelize';
+import { loadSync } from '@grpc/proto-loader';
+import { loadPackageDefinition } from 'grpc';
 
-export const migrateDB = (sequelize: Sequelize, path: string) => new Umzug({
+const migrateDB = (sequelize: Sequelize, path: string) => new Umzug({
   migrations: {
     path,
     pattern: /\.migration.[t|j]s$/,
@@ -17,3 +20,18 @@ export const migrateDB = (sequelize: Sequelize, path: string) => new Umzug({
   storage: 'sequelize',
   storageOptions: { sequelize },
 }).up();
+
+const loadProtoPackageDefinition = (path: string) => {
+  const PROTO_PATH = resolve(__dirname, '..', path);
+  const protoDefinition = loadSync(PROTO_PATH, {
+    keepCase: true,
+    longs: String,
+    enums: String,
+    defaults: true,
+    oneofs: true,
+  });
+  const packageDefinition = loadPackageDefinition(protoDefinition) as any;
+  return packageDefinition;
+};
+
+export { migrateDB, loadProtoPackageDefinition };
