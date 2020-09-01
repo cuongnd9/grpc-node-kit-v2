@@ -30,9 +30,7 @@
   },
   "dependencies": {
     "@grpc/proto-loader": "^0.5.5",
-    "diana-js": "^0.7.0",
     "grpc": "^1.24.3",
-    "joi": "^14.3.1",
     "juno-js": "^0.1.1",
     "lodash": "^4.17.15",
     "mali": "^0.21.0",
