@@ -3,6 +3,7 @@ import Umzug from 'umzug';
 import { Sequelize } from 'sequelize';
 import { loadSync } from '@grpc/proto-loader';
 import { loadPackageDefinition } from 'grpc';
+import { promisify } from 'util';
 
 const migrateDB = (sequelize: Sequelize, path: string) => new Umzug({
   migrations: {
@@ -34,4 +35,15 @@ const loadProtoPackageDefinition = (path: string) => {
   return packageDefinition;
 };
 
-export { migrateDB, loadProtoPackageDefinition };
+const promisifyAll = (client: any) => {
+  const to: any = {};
+  // eslint-disable-next-line no-restricted-syntax
+  for (const k in client) {
+    // eslint-disable-next-line no-continue
+    if (typeof client[k] !== 'function') continue;
+    to[k] = promisify(client[k].bind(client));
+  }
+  return to;
+};
+
+export { migrateDB, loadProtoPackageDefinition, promisifyAll };
