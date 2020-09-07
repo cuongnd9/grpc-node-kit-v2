@@ -6,6 +6,7 @@
     "start:dev": "nodemon --ignore build/ --exec ts-node src/index.ts",
     "prebuild": "rm -rf build",
     "build": "tsc -p tsconfig.build.json",
+    "postbuild": "copyfiles -u 1 src/proto/* build",
     "build:proto": "./scripts/build-proto.sh",
     "start": "node ./build/index.js",
     "lint": "eslint src/**/*.ts",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "@grpc/proto-loader": "^0.5.5",
+    "copyfiles": "^2.3.0",
     "grpc": "^1.24.3",
     "juno-js": "^0.1.1",
     "lodash": "^4.17.15",
